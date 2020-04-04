@@ -67,9 +67,16 @@ export class AppComponent {
     },
     {'id':5,'pregunta':"Soy escorpio, mi horoscopo me advierte...",
     'respuesta1':{'texto':"'Hoy va a ser un dia con mucha suerte', asi que aprovecho y compro 100 boletos de loteria",'puntos':[3,0,0]},
-    'respuesta2':{'texto':"'Eres un modelo a seguir por tu inteligencia', asi que lo uso como escusa para no estudiar para el examen",'puntos':[2,0,0]},
+    'respuesta2':{'texto':"'Eres un modelo a seguir por tu inteligencia', asi que lo uso como escusa para no estudiar para el examen",'puntos':[2,-1,0]},
     'respuesta3':{'texto':"'Ten cuidado de los tauro, te intentan engañar', Le parto las piernas a mi abuela tauro, no vaya a atreverse a hacerme algo",'puntos':[2,-2,2]},
     'respuesta4':{'texto':"No creo en el horoscopo, no leo la advertencia",'puntos':[-2,0,0]},
+    'respondida':false
+    },
+    {'id':6,'pregunta':"Ataque nuclear a tu ciudad! Solo queda hueco para una persona más en el refugio",
+    'respuesta1':{'texto':"Peleo con todos para asegurarme que la niña discapacitada entra en el refugio",'puntos':[-1,3,1]},
+    'respuesta2':{'texto':"Lloro tanto que me dejan entrar por pena",'puntos':[1,-1,-2]},
+    'respuesta3':{'texto':"Mato a los de dentro del refugio para que puedan entrar todos mis amigos",'puntos':[-1,-1,2]},
+    'respuesta4':{'texto':"Me escondo en la nevera, en las peliculas funciona!",'puntos':[1,0,0]},
     'respondida':false
     },
 
