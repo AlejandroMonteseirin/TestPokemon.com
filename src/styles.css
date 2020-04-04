@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+html{
+    background-image: url("assets/pika2.jpg");
+  background-repeat: repeat;
+  background-size: 150px;
+}
+
+@font-face {
+  font-family: poke;
+  src: url("assets/fuentes/Hollow.ttf");
+}
+@font-face {
+  font-family: poke2;
+  src: url("assets/fuentes/Solid.ttf");
+}
