@@ -1,12 +1,16 @@
 
 
-
 <div class="row">
   <div class="card rosita col m8 offset-m2 s12">
     <h1 style="text-align:center;color:#FDE3A8;  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;"
      class="fuentePokemon2"> TEST POKEMON . COM </h1>
     <br>
     <br>
+    <br>
+    <div class="row fuentePokemon" style="text-align:center">
+      <a *ngIf="!testIniciado" style="color:black;font-size:2em" class="waves-effect colorElegidoporcarolina waves-light btn-large" (click)="iniciarTest()">Iniciar Test</a>
+    </div>
+    <span *ngIf="testIniciado">
     <div class="card colorElegidoporcarolina" *ngFor="let pregunta of preguntas">
       <p style="padding:1em;font-family: Comic Sans MS, cursive, sans-serif;font-size:1.1em">{{pregunta.pregunta}} </p>
       <div style="padding:1em;">
@@ -101,13 +105,13 @@
         </div>
         <br>
         <div style="text-align:center" >
-          <a class="waves-effect rosita colorRespuesta btn"  (click)="refresh()">Repetir test</a>
+          <div class="waves-effect rosita colorRespuesta btn"  (click)="refresh()">Repetir test</div>
         </div>
     </div>
-       
   </div>
+  </span> 
   <div class="row">
-      <ng-adsense [adtest]='true'></ng-adsense>
+     <!-- <ng-adsense [adtest]='true'></ng-adsense>-->
   </div>
   <div class="card colorElegidoporcarolina">
     <div class="row">

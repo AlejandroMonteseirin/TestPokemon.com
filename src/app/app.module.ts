@@ -13,11 +13,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule
     ,FormsModule,
-    HttpClientModule,
-    AdsenseModule.forRoot({
-      adClient: 'ca-pub-x',
-      adSlot: 0,
-    }),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

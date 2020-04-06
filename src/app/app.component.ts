@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class AppComponent {
   pokemonElegido=undefined;
   puntosTotales=[0,0,0];
+  testIniciado=false;
   pokemons=[
                           //mongolo,wenagente,fuerte
     {'nombre':"Bulbasur",'puntos':[70,60,-30]},
@@ -30,6 +32,8 @@ export class AppComponent {
     {'nombre':"Meowth",'puntos':[-30,-70,10]},
     {'nombre':"Clefable",'puntos':[-30,-10,-30]},
     {'nombre':"Chansey",'puntos':[10,20,40]},
+    {'nombre':"Jinx",'puntos':[-40,0,-40]},
+
 
 
 
@@ -98,7 +102,7 @@ export class AppComponent {
     {'id':8,'pregunta':"Acabas de hacer este increible test pokemon ¿qué haces?",
     'respuesta1':{'texto':"Le doy al botón de donación del final de la pégina, y dono unos euros al paypal, para pagar los servidores",'puntos':[1,2,0]},
     'respuesta2':{'texto':"Me tocó bulbasur, rompo la pantalla del portatil y me cago en el creador del test",'puntos':[2,-1,1]},
-    'respuesta3':{'texto':"Soy tieso, asi que lo comparto con mis amigos, a ver si a ellos no les toca metadod como a mi :( ",'puntos':[0,1,0]},
+    'respuesta3':{'texto':"Soy tieso, asi que lo comparto con mis amigos, a ver si a ellos no les toca metapod como a mi :( ",'puntos':[0,1,0]},
     'respuesta4':{'texto':"Acabo el test en silencio y prosigo mi partida de minecraft, sin compartir ni donar porque me la suda el esfuerzo del creador",'puntos':[0,-1,0]},
     'respondida':false
     },
@@ -108,8 +112,8 @@ export class AppComponent {
   
   
   ]
-  constructor(private http:HttpClient) {
-   
+  constructor(private http:HttpClient,private seo: SeoService) {
+    this.seo.setMetaTags(null);
   }
   
   public clikado(respuesta,pregunta){
@@ -181,7 +185,10 @@ export class AppComponent {
       window.location.reload();
   }
   
- 
+  public iniciarTest(){
+    this.testIniciado=true;
+    
+  }
 
 
 }
