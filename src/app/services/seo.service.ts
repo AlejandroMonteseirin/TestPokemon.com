@@ -27,6 +27,15 @@ export class SeoService {
     // Google
     this.meta.updateTag({ name: 'Description', content: config.description });
 
+
+
+    this.meta.updateTag({ name: 'instagram:card', content: 'summary' });
+    this.meta.updateTag({ name: 'instagram:site', content: 'https://www.instagram.com/_testpokemon.com_/' });
+    this.meta.updateTag({ name: 'instagram:title', content: '_testpokemon.com_' });
+    this.meta.updateTag({ name: 'instagram:description', content: 'Averigua que pokémon eres haciendo el test más completo de todo Internet. Comparte con tus amigos y comparad vuestros resultados.' });
+    this.meta.updateTag({ name: 'instagram:image', content: 'https://www.testPokemon.com/assets/ico.png' });
+
+    
     // Twitter
     /*
     this.meta.updateTag({ name: 'twitter:card', content: 'summary' });
