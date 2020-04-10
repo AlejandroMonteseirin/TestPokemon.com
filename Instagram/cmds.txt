@@ -1,3 +1,0 @@
-E:\Users\Alexmp\Documents\MEGAsync\Cosas_Uni\Proyectos\BotInsta\instabot.py-master>
-
-python BotAle.py

@@ -1,0 +1,80 @@
+---
+login: "_testpokemon.com_"
+password: "hakusanwapo"
+
+start_at_h: 7
+start_at_m: 0
+end_at_h: 20
+end_at_m: 59
+window_check_every: 3600
+
+debug: 1
+user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36"
+
+tag_list: ["pokemon","pokemongo","TestPokemon","test","nintendo","pokemonCommunity","pokemonCenter","pokemonTrainer","Bulbasaur","Ivysaur","Venusaur","Charmander","Charmeleon","Charizard","Squirtle","Wartortle","Blastoise","Caterpie","Metapod","Butterfree","Weedle","Kakuna","Beedrill","Pidgey","Pidgeotto","Pidgeot","Rattata","Raticate","Spearow","Fearow","Ekans","Arbok","Pikachu","Raichu","Sandshrew","Sandslash","Nidoran","Nidorina","Nidoqueen","Nidoran","Nidorino","Nidoking","Clefairy","Clefable","Vulpix","Ninetales","Jigglypuff","Wigglytuff","Zubat","Golbat","Oddish","Gloom","Vileplume","Paras","Parasect","Venonat","Venomoth","Diglett","Dugtrio","Meowth","Persian","Psyduck","Golduck","Mankey","Primeape","Growlithe","Arcanine","Poliwag","Poliwhirl","Poliwrath","Abra","Kadabra","Alakazam","Machop","Machoke","Machamp","Bellsprout","Weepinbell","Victreebel","Tentacool","Tentacruel","Geodude","Graveler","Golem","Ponyta","Rapidash","Slowpoke","Slowbro","Magnemite","Magneton","Farfetch'd","Doduo","Dodrio","Seel","Dewgong","Grimer","Muk","Shellder","Cloyster","Gastly","Haunter","Gengar","Onix","Drowzee","Hypno","Krabby","Kingler","Voltorb","Electrode","Exeggcute","Exeggutor","Cubone","Marowak","Hitmonlee","Hitmonchan","Lickitung","Koffing","Weezing","Rhyhorn","Rhydon","Chansey","Tangela","Kangaskhan","Horsea","Seadra","Goldeen","Seaking","Staryu","Starmie","Mr. Mime","Scyther","Jynx","Electabuzz","Magmar","Pinsir","Tauros","Magikarp","Gyarados","Lapras","Ditto","Eevee","Vaporeon","Jolteon","Flareon","Porygon","Omanyte","Omastar","Kabuto","Kabutops","Aerodactyl","Snorlax","Articuno","Zapdos","Moltres","Dratini","Dragonair","Dragonite","Mewtwo","Mew"]
+tag_blacklist: ["sex", "porno"]
+
+like_per_day: 0
+like_per_run: 0
+like_followers_per_run: 0
+max_like_for_one_tag: 36
+media_min_like: 20
+media_max_like: 400
+like_followers_per_run: 0
+
+unlike_per_day: 0
+time_till_unlike: 259200
+
+follow_per_day: 60
+follow_per_run: 60
+follow_time: 259200
+follow_attempts: 2
+user_min_follow: 50
+user_max_follow: 1200
+follow_time_enabled: 0
+
+unfollow_per_day: 0
+unfollow_break_min: 3
+unfollow_break_max: 17
+unfollow_selebgram: true
+unfollow_probably_fake: true
+unfollow_inactive: true
+unfollow_recent_feed: false
+unfollow_whitelist: []
+
+unwanted_username_list: ["free", "travel", "shop", "store", "sex", "online"]
+comments_per_day: 0
+comment_list: [
+        ["this", "the", "your"],
+        ["photo", "picture", "pic", "shot", "snapshot"],
+        ["is", "looks", "feels", "is really"],
+        [
+            "great",
+            "super",
+            "good",
+            "very good",
+            "good",
+            "wow",
+            "WOW",
+            "cool",
+            "GREAT",
+            "magnificent",
+            "magical",
+            "very cool",
+            "stylish",
+            "beautiful",
+            "so beautiful",
+            "so stylish",
+            "so professional",
+            "lovely",
+            "so lovely",
+            "very lovely",
+            "glorious",
+            "so glorious",
+            "very glorious",
+            "adorable",
+            "excellent",
+            "amazing",
+        ],
+        [".", "..", "...", "!", "!!", "!!!"],
+    ]

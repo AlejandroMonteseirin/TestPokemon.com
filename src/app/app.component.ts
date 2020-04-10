@@ -11,6 +11,7 @@ export class AppComponent {
   pokemonElegido=undefined;
   puntosTotales=[0,0,0];
   testIniciado=false;
+  loading=false;
   pokemons=[
                           //mongolo,wenagente,fuerte
     {'nombre':"Bulbasur",'puntos':[70,60,-30]},
@@ -44,9 +45,9 @@ export class AppComponent {
   
   preguntas=[
     {'id':0,'pregunta':"Una noche fría de invierno entra en tu casa un ladrón en busca de cobijo y tus más preciados mangas hentai, ¿Qué haces?",
-    'respuesta1':{'texto':"Lo mato con un tenedor",'puntos':[0,-1,2]},
+    'respuesta1':{'texto':"Lo mato con un tenedor",'puntos':[0,-1,1]},
     'respuesta2':{'texto':"Lo adopto y comparto todos mis bienes",'puntos':[3,2,0]},
-    'respuesta3':{'texto':"Lo encadeno junto a los demás",'puntos':[0,-5,2]},
+    'respuesta3':{'texto':"Lo encadeno junto a los demás",'puntos':[0,-3,2]},
     'respuesta4':{'texto':"Huyo aterrorizado y llamo a la policia",'puntos':[-1,0,-1]},
     'respondida':false
     },
@@ -59,14 +60,14 @@ export class AppComponent {
     },
     {'id':2,'pregunta':"Acabas de ganar la lotería, ¿En qué piensas gastarte el dinero?",
     'respuesta1':{'texto':"Lo dono todo a una dudosa organización que dice ayudar a un país tercermundista",'puntos':[2,2,0]},
-    'respuesta2':{'texto':"Lo gasto todo en una desenfrenada noche la cual no me acordaré de haber vivido al día siguiente",'puntos':[1,-2,-1]},
-    'respuesta3':{'texto':"Ahorro el dinero para el futuro",'puntos':[-2,0,1]},
-    'respuesta4':{'texto':"Comparto parte del dinero con mis seres queridos y me quedo con el resto",'puntos':[-1,2,0]},
+    'respuesta2':{'texto':"Lo gasto todo en una desenfrenada noche la cual no me acordaré de haber vivido al día siguiente",'puntos':[1,-2,0]},
+    'respuesta3':{'texto':"Ahorro el dinero para el futuro",'puntos':[-2,0,0]},
+    'respuesta4':{'texto':"Comparto parte del dinero con mis seres queridos y me quedo con el resto",'puntos':[-1,1,0]},
     'respondida':false
     },
     {'id':3,'pregunta':"Durante una cena en un restaurante lujoso, tu fiel amigo Eustaquio, resulta envenenado con cianuro ¿Como reaccionas?",
-    'respuesta1':{'texto':"Entro en cólera y destruyo a todas las personas que me parezcas sospechosas, para vengarle",'puntos':[2,-2,5]},
-    'respuesta2':{'texto':"Recuerdo mis 400 lecturas de misterios y asesinatos, e inicio una investigación para hallar al culpable",'puntos':[-3,1,1]},
+    'respuesta1':{'texto':"Entro en cólera y destruyo a todas las personas que me parezcas sospechosas, para vengarle",'puntos':[2,-2,3]},
+    'respuesta2':{'texto':"Recuerdo mis 400 lecturas de misterios y asesinatos, e inicio una investigación para hallar al culpable",'puntos':[-2,1,1]},
     'respuesta3':{'texto':"Empiezo a llorar mientras acabo mi postre",'puntos':[2,0,-2]},
     'respuesta4':{'texto':"Llamo a la policia y le cuento lo ocurrido",'puntos':[-1,0,0]},
     'respondida':false
@@ -74,8 +75,8 @@ export class AppComponent {
     {'id':4,'pregunta':"Tu perro explota sin explicación. Esta muerto, Sólo queda una pierna",
     'respuesta1':{'texto':"Entierro la pierna y realizo un bonito funeral",'puntos':[-1,1,1]},
     'respuesta2':{'texto':"Lloro desconsoladamente durante horas, mientras abrazo la pierna",'puntos':[1,2,-2]},
-    'respuesta3':{'texto':"Me como la pierna, hay que aprovechar todas las proteinas",'puntos':[-2,-2,0]},
-    'respuesta4':{'texto':"Encuentro una solución a porque explotó tras 14 años estudiando física cuántica",'puntos':[-5,0,0]},
+    'respuesta3':{'texto':"Me como la pierna, hay que aprovechar todas las proteinas",'puntos':[-1,-3,0]},
+    'respuesta4':{'texto':"Encuentro una solución a porque explotó tras 14 años estudiando física cuántica",'puntos':[-4,0,0]},
     'respondida':false
     },
     {'id':5,'pregunta':"Soy escorpio, mi horoscopo me advierte...",
@@ -125,6 +126,7 @@ export class AppComponent {
   }
 
   public eligePokemon(){
+    this.loading=true;
     let multiplicador=10;
     let pokemonElegido=undefined;
     let puntos;
@@ -173,7 +175,11 @@ export class AppComponent {
 
     console.log(this.pokemons);
     let azar=Math.floor(Math.random() * (3 - 0));
-    this.pokemonElegido=this.pokemons[azar];
+    this.delay(3000).then(()=>{
+      this.loading=false;
+      this.pokemonElegido=this.pokemons[azar];
+    });
+    
   }
   
   private delay(ms: number)
@@ -187,8 +193,30 @@ export class AppComponent {
   
   public iniciarTest(){
     this.testIniciado=true;
-    
+    this.pop();
   }
 
-
+  public pop(){
+    console.log("mostrando anuncio, sry :C");
+  var _pop = _pop || [];
+  _pop.push(['siteId', 3969971]);
+  _pop.push(['minBid', 0.003000]);
+  _pop.push(['popundersPerIP', 3]);
+  _pop.push(['delayBetween', 3600]);
+  _pop.push(['default', false]);
+  _pop.push(['defaultPerDay', 0]);
+  _pop.push(['topmostLayer', false]);
+  (function() {
+    var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+    var s = document.getElementsByTagName('script')[0]; 
+    pa.src = '//c1.popads.net/pop.js';
+    pa.onerror = function() {
+      var sa = document.createElement('script'); sa.type = 'text/javascript'; sa.async = true;
+      sa.src = '//c2.popads.net/pop.js';
+      s.parentNode.insertBefore(sa, s);
+    };
+    s.parentNode.insertBefore(pa, s);
+  
+   });
+  }
 }

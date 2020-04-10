@@ -7,9 +7,18 @@
     <br>
     <br>
     <br>
-    <div class="row fuentePokemon" style="text-align:center">
-      <a *ngIf="!testIniciado" style="color:black;font-size:2em" class="waves-effect colorElegidoporcarolina waves-light btn-large" (click)="iniciarTest()">Iniciar Test</a>
+    <div  class="card colorElegidoporcarolina" style="padding:1em;font-size:1.2em">
+      <p>
+      Averigua que pokémon eres haciendo el test más completo de todo Internet.<br>
+      Tras unas breves preguntas, el algoritmo inteligente de <b>TestPokemon.com</b> te asignará el pokemon al que más te pareces.<br>
+      ¡Compártelo con tus amigos y comparad vuestros resultados!
+      </p>
     </div>
+    <br>
+    <div class="row fuentePokemon" style="text-align:center">
+      <a *ngIf="!testIniciado" style="color:black;font-size:2em;padding-bottom:2.3em" class="waves-effect colorElegidoporcarolina waves-light btn-large" (click)="iniciarTest()">Iniciar Test</a>
+    </div>
+    <br>
     <span *ngIf="testIniciado">
     <div class="card colorElegidoporcarolina" *ngFor="let pregunta of preguntas">
       <p style="padding:1em;font-family: Comic Sans MS, cursive, sans-serif;font-size:1.1em">{{pregunta.pregunta}} </p>
@@ -39,7 +48,8 @@
       </div>
     </div>
     <div style="text-align:center" *ngIf="!pokemonElegido">
-      <a class="waves-effect colorElegidoporcarolina colorRespuesta btn"  (click)="eligePokemon()">Calcular tu pokemon</a>
+      <a *ngIf="!loading" class="waves-effect colorElegidoporcarolina colorRespuesta btn"  (click)="eligePokemon()">Calcular tu pokemon</a>
+      <app-spiner *ngIf="loading"></app-spiner>
     </div>
     <br>
     <br>
@@ -110,14 +120,13 @@
     </div>
   </div>
   </span> 
-  <div class="row">
-     <!-- <ng-adsense [adtest]='true'></ng-adsense>-->
-  </div>
+  <br>
   <div class="card colorElegidoporcarolina">
     <div class="row">
       <div class="col m8 s12">
         <div style="margin:2em">
-          Apoya con una donación para pagar el mantenimiento de la pagina o invitame a un café :D
+          <p>Apoya con una donación para pagar el mantenimiento de la pagina o invitame a un café :D</p>
+
         </div>
       </div>
       <div class="col m4 s12" style="padding:1em;">
@@ -125,11 +134,10 @@
         <img alt="Qries" src="assets/donate.png">
     </a>
       </div>
-    
-
-
   </div>
-  <div style="font-size:0.7em;">Esta página esta hecha sin ánimo de lucro por favor no nos la tires nintendo, perdón por las multiples infracciones de copyright</div>
+
+
+  <div style="font-size:0.7em;padding:0.5em">Esta página esta hecha sin ánimo de lucro por favor no nos la tires nintendo, perdón por las multiples infracciones de copyright</div>
 </div>
 
 

@@ -5,10 +5,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { AdsenseModule } from 'ng2-adsense';
 
 import { AppComponent } from './app.component';
+import { SpinerComponent } from './components/spiner/spiner.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SpinerComponent
   ],
   imports: [
     BrowserModule
