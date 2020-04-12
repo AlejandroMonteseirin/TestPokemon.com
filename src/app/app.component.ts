@@ -26,20 +26,14 @@ export class AppComponent {
     {'nombre':"Gengar",'puntos':[-80,-99,80]},
     {'nombre':"Magikarp",'puntos':[80,40,-60]},
     {'nombre':"Lickitung",'puntos':[30,-40,30]},
-    {'nombre':"Ditto",'puntos':[70,20,-20]},
+    {'nombre':"Ditto",'puntos':[70,20,-30]},
     {'nombre':"Eevee",'puntos':[20,60,15]},
     {'nombre':"Bellsprout",'puntos':[40,20,20]},
     {'nombre':"Pikachu",'puntos':[-50,50,40]},
     {'nombre':"Meowth",'puntos':[-30,-70,10]},
     {'nombre':"Clefable",'puntos':[-30,-10,-30]},
     {'nombre':"Chansey",'puntos':[10,20,40]},
-    {'nombre':"Jinx",'puntos':[-40,0,-40]},
-
-
-
-
-
-
+    {'nombre':"Jynx",'puntos':[-40,0,-40]},
 
   ]
   
@@ -51,7 +45,7 @@ export class AppComponent {
     'respuesta4':{'texto':"Huyo aterrorizado y llamo a la policia",'puntos':[-1,0,-1]},
     'respondida':false
     },
-    {'id':1,'pregunta':"Vas andando por la ciudad de japón y encuentras una katana reluciente en el suelo ¿Qué haces?",
+    {'id':1,'pregunta':"Vas andando por una ciudad de japón y encuentras una katana reluciente en el suelo ¿Qué haces?",
     'respuesta1':{'texto':"La robo sutilmente",'puntos':[-1,-1,0]},
     'respuesta2':{'texto':"La estreno con el vecino extranjero que no habla mi idioma",'puntos':[1,-3,2]},
     'respuesta3':{'texto':"La llevo a objetos perdidos o a la comisaria",'puntos':[0,1,0]},
@@ -100,25 +94,86 @@ export class AppComponent {
     'respuesta4':{'texto':"Le doy una patata que estaba un poco quemada y tampoco la quería",'puntos':[-1,-1,0]},
     'respondida':false
     },
-    {'id':8,'pregunta':"Acabas de hacer este increible test pokemon ¿qué haces?",
-    'respuesta1':{'texto':"Le doy al botón de donación del final de la pégina, y dono unos euros al paypal, para pagar los servidores",'puntos':[1,2,0]},
-    'respuesta2':{'texto':"Me tocó bulbasur, rompo la pantalla del portatil y me cago en el creador del test",'puntos':[2,-1,1]},
-    'respuesta3':{'texto':"Soy tieso, asi que lo comparto con mis amigos, a ver si a ellos no les toca metapod como a mi :( ",'puntos':[0,1,0]},
-    'respuesta4':{'texto':"Acabo el test en silencio y prosigo mi partida de minecraft, sin compartir ni donar porque me la suda el esfuerzo del creador",'puntos':[0,-1,0]},
+    {'id':8,'pregunta':"Pandemia mundial, hay que quedarse en casa para evitar el contagio",
+    'respuesta1':{'texto':"Me quedo en casa y apoyo a los sanitarios por twitter",'puntos':[-1,1,0]},
+    'respuesta2':{'texto':"Soy el paciente 0, me encanta comer zubat crudo",'puntos':[2,0,0]},
+    'respuesta3':{'texto':"Esparzo el virus por el mundo, solo los fuertes como yo deben sobrevivir",'puntos':[0,-1,1]},
+    'respuesta4':{'texto':"Pongo el himno de mi pais a todo volumen todo el tiempo para animar el vecindario",'puntos':[1,0,0]},
     'respondida':false
     },
+    {'id':9,'pregunta':"Guerra mundial, soy reclutado",
+    'respuesta1':{'texto':"Le hago un trabajillo algo turbio a un comandante para evitar ir al campo de batalla",'puntos':[-1,0,-1]},
+    'respuesta2':{'texto':"Voy a liarme a puñetazos con un tanque",'puntos':[1,0,1]},
+    'respuesta3':{'texto':"Mis multiples enfermedades cronicas y escasa salud en general me evitan ir al campo de batalla, de hecho empiezo a recibir una paga del estado para compensarlas",'puntos':[0,0,-1]},
+    'respuesta4':{'texto':"Voy a regañadientes a primera linea de infanteria",'puntos':[0,0,0]},
+    'respondida':false
+    },
+    {'id':10,'pregunta':"Hay un dinosaurio hervivoro gigante en mi jardin, ¿que hago?",
+    'respuesta1':{'texto':"Lo intento domesticar, siempre se me han dado bien los animales ",'puntos':[0,1,0]},
+    'respuesta2':{'texto':"Lo cazo con mi rifle de asalto, ahora su cabeza esta en mi salon",'puntos':[0,-1,1]},
+    'respuesta3':{'texto':"Le ato una cuerda y lo arrastro a la reserva natural mas cercana, parece que se lleva bien con las jirafas",'puntos':[0,1,1]},
+    'respuesta4':{'texto':"Wtf llamo a la policia, al zoologico y al ejercito",'puntos':[0,0,-1]},
+    'respondida':false
+    },
+    {'id':11,'pregunta':"El team rocket secuestra a mi pikachu por quinta vez esta semana, tras encontrarlos...",
+    'respuesta1':{'texto':"Esta será la última vez, les parto las piernas para que se dejen de tonterias",'puntos':[0,-1,1]},
+    'respuesta2':{'texto':"Me aseguro de que vayan a prisión de verdad",'puntos':[-1,0,1]},
+    'respuesta3':{'texto':"Les suelto un monologo de 50 minutos sobre el bien y el mal, parece que ahora son budistas gracias a mi",'puntos':[0,1,0]},
+    'respuesta4':{'texto':"Les dejo escapar de rositas por algun motivo",'puntos':[1,0,0]},
+    'respondida':false
+    },
+    {'id':12,'pregunta':"Veo que mi amigo mohamed trae un extraño dispositivo con luces y cables en la mochila a clase",
+    'respuesta1':{'texto':"Debe ser un trabajo de ciencias, lo ignoro ya que no soy racista",'puntos':[1,1,0]},
+    'respuesta2':{'texto':"Grito histerico al verlo y alerto a todo el mundo de que mohamed es terrorista",'puntos':[1,-1,-1]},
+    'respuesta3':{'texto':"Lo examino en profundidad para ver de que se trata antes de tomar una decisión",'puntos':[-1,0,0]},
+    'respuesta4':{'texto':"Encaro a mohamed en los baños y le hago un interrogatorio, si es una bomba debo comvencerle de que cambie de idea",'puntos':[0,1,1]},
+    'respondida':false
+    },
+    {'id':13,'pregunta':"Me entra diarrea durante un examen...",
+    'respuesta1':{'texto':"Me mantengo en el examen sufriendo, la nota que saque es la prioridad",'puntos':[-1,0,1]},
+    'respuesta2':{'texto':"Aviso el profesor y le intento convencer de que me aplace el examen, dandole pena",'puntos':[-1,0,-1]},
+    'respuesta3':{'texto':"Me pongo a llorar de impotencia mientras toda la clase empieza a apestarse",'puntos':[1,0,-1]},
+    'respuesta4':{'texto':"Le digo al profesor que debo ir al baño y aprovecho para copiar",'puntos':[-1,-1,0]},
+    'respondida':false
+    },
+    ,
+    {'id':14,'pregunta':"Hay de comer lentejas, no me gustan las lentejas",
+    'respuesta1':{'texto':"Monto un berrinche para que me den de comer otra cosa",'puntos':[1,-1,-1]},
+    'respuesta2':{'texto':"Me las como aunque no me gusten, porque valoro el esfuerzo y dedicación de quien las ha cocinado",'puntos':[0,1,0]},
+    'respuesta3':{'texto':"Monto un complejo sistema de acueductos para enviarle las lentejas al plato del perro sin que nadie se de cuenta",'puntos':[-1,-1,0]},
+    'respuesta4':{'texto':"Establezco una alianza con mi primo quinto para que el se coma mis lentejas y yo le doy mi postre a cambio",'puntos':[-1,0,0]},
+    'respondida':false
+    },
+  ];
 
-  
-  
-  
-  
-  ]
+  preguntaFinal= {'id':8,'pregunta':"Acabas de hacer este increible test pokemon ¿qué haces?",
+  'respuesta1':{'texto':"Le doy al botón de donación del final de la pégina, y dono unos euros al paypal, para pagar los servidores",'puntos':[1,2,0]},
+  'respuesta2':{'texto':"Me tocó bulbasur, rompo la pantalla del portatil y me cago en el creador del test",'puntos':[2,-1,1]},
+  'respuesta3':{'texto':"Soy tieso, asi que lo comparto con mis amigos, a ver si a ellos no les toca metapod como a mi :( ",'puntos':[0,1,0]},
+  'respuesta4':{'texto':"Acabo el test en silencio y prosigo mi partida de minecraft, sin compartir ni donar porque me la suda el esfuerzo del creador",'puntos':[0,-1,0]},
+  'respondida':false
+  };
+  preguntasElegidas=[];
   constructor(private http:HttpClient,private seo: SeoService) {
     this.seo.setMetaTags(null);
+
+    for (var _i = 0; _i < 8; _i++) {
+      let azar=Math.floor(Math.random() * (this.preguntas.length ));
+      this.preguntas[azar].id=_i;
+      this.preguntasElegidas.push(this.preguntas[azar]);
+      this.preguntas.splice(azar,1)
+    }
+    this.preguntasElegidas.push(this.preguntaFinal);
+    console.log(this.preguntasElegidas);
   }
+
+  public iniciarTest(){
+    this.testIniciado=true;
+  }
+
   
   public clikado(respuesta,pregunta){
-    this.preguntas[pregunta.id]['respondida']=true;
+    this.preguntasElegidas[pregunta.id]['respondida']=true;
     this.puntosTotales[0]=this.puntosTotales[0]+respuesta.puntos[0];
     this.puntosTotales[1]=this.puntosTotales[1]+respuesta.puntos[1];
     this.puntosTotales[2]=this.puntosTotales[2]+respuesta.puntos[2];
@@ -191,32 +246,6 @@ export class AppComponent {
       window.location.reload();
   }
   
-  public iniciarTest(){
-    this.testIniciado=true;
-    this.pop();
-  }
-
-  public pop(){
-    console.log("mostrando anuncio, sry :C");
-  var _pop = _pop || [];
-  _pop.push(['siteId', 3969971]);
-  _pop.push(['minBid', 0.003000]);
-  _pop.push(['popundersPerIP', 3]);
-  _pop.push(['delayBetween', 3600]);
-  _pop.push(['default', false]);
-  _pop.push(['defaultPerDay', 0]);
-  _pop.push(['topmostLayer', false]);
-  (function() {
-    var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
-    var s = document.getElementsByTagName('script')[0]; 
-    pa.src = '//c1.popads.net/pop.js';
-    pa.onerror = function() {
-      var sa = document.createElement('script'); sa.type = 'text/javascript'; sa.async = true;
-      sa.src = '//c2.popads.net/pop.js';
-      s.parentNode.insertBefore(sa, s);
-    };
-    s.parentNode.insertBefore(pa, s);
+ 
   
-   });
-  }
 }

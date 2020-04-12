@@ -1,5 +1,5 @@
 ---
-login: "_testpokemon.com_"
+login: "testpokemon.com_"
 password: "hakusanwapo"
 
 start_at_h: 7
@@ -25,10 +25,10 @@ like_followers_per_run: 0
 unlike_per_day: 0
 time_till_unlike: 259200
 
-follow_per_day: 60
-follow_per_run: 60
+follow_per_day: 30
+follow_per_run: 30
 follow_time: 259200
-follow_attempts: 2
+follow_attempts: 1
 user_min_follow: 50
 user_max_follow: 1200
 follow_time_enabled: 0

@@ -6,11 +6,13 @@ import { AdsenseModule } from 'ng2-adsense';
 
 import { AppComponent } from './app.component';
 import { SpinerComponent } from './components/spiner/spiner.component';
+import { MainTestInEnglishComponent } from './en/main-test-in-english/main-test-in-english.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SpinerComponent
+    SpinerComponent,
+    MainTestInEnglishComponent
   ],
   imports: [
     BrowserModule
