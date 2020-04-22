@@ -6,19 +6,25 @@ import { AdsenseModule } from 'ng2-adsense';
 
 import { AppComponent } from './app.component';
 import { SpinerComponent } from './components/spiner/spiner.component';
-import { MainTestInEnglishComponent } from './en/main-test-in-english/main-test-in-english.component';
+import { MainTestInEnglishComponent } from './main-test-in-english/main-test-in-english.component';
+import { MainTestInSpanishComponent } from './main-test-in-spanish/main-test-in-spanish.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SpinerComponent,
-    MainTestInEnglishComponent
+    MainTestInEnglishComponent,
+    MainTestInSpanishComponent
   ],
   imports: [
     BrowserModule
     ,FormsModule,
-    HttpClientModule
-  ],
+    HttpClientModule,
+    
+    ]
+  ,
   providers: [],
   bootstrap: [AppComponent]
 })

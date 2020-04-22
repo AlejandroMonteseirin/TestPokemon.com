@@ -1,0 +1,146 @@
+
+
+<div class="row">
+  <div class="card rosita col m8 offset-m2 s12">
+    <h1 style="text-align:center;color:#FDE3A8;  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;"
+     class="fuentePokemon2"> TEST POKEMON . COM </h1>
+    <br>
+    <br>
+    <br>
+    <div  class="card colorElegidoporcarolina" style="padding:1em;font-size:1.2em">
+      <p>
+      Averigua que pokémon eres haciendo el test más completo de todo Internet.<br>
+      Tras unas breves preguntas, el algoritmo inteligente de <b>TestPokemon.com</b> te asignará el pokemon al que más te pareces.<br>
+      ¡Compártelo con tus amigos y comparad vuestros resultados!
+      </p>
+    </div>
+    <br>
+    <div class="row fuentePokemon" style="text-align:center">
+      <a *ngIf="!testIniciado" style="color:black;font-size:2em;padding-bottom:2.3em" class="waves-effect colorElegidoporcarolina waves-light btn-large" (click)="iniciarTest()">Iniciar Test</a>
+    </div>
+    <br>
+    <span *ngIf="testIniciado">
+    <div class="card colorElegidoporcarolina" *ngFor="let pregunta of preguntasElegidas">
+      <p style="padding:1em;font-family: Comic Sans MS, cursive, sans-serif;font-size:1.1em">{{pregunta.pregunta}} </p>
+      <div style="padding:1em;">
+        <label>
+          <input type="checkbox"  [disabled]="pregunta.respondida" (click)="clikado(pregunta.respuesta1,pregunta)"/>
+          <span class="colorRespuesta">{{pregunta.respuesta1.texto}}</span>
+        </label>
+      </div>
+      <div style="padding:1em">
+        <label>
+          <input type="checkbox" [disabled]="pregunta.respondida" (click)="clikado(pregunta.respuesta2,pregunta)"/>
+          <span class="colorRespuesta">{{pregunta.respuesta2.texto}}</span>
+        </label>
+      </div>
+      <div style="padding:1em">
+        <label>
+          <input type="checkbox" [disabled]="pregunta.respondida" (click)="clikado(pregunta.respuesta3,pregunta)"/>
+          <span class="colorRespuesta">{{pregunta.respuesta3.texto}}</span>
+        </label>
+      </div>
+      <div style="padding:1em">
+        <label>
+          <input type="checkbox" [disabled]="pregunta.respondida" (click)="clikado(pregunta.respuesta4,pregunta)"/>
+          <span class="colorRespuesta">{{pregunta.respuesta4.texto}}</span>
+        </label>
+      </div>
+    </div>
+    <div style="text-align:center" *ngIf="!pokemonElegido">
+      <a *ngIf="!loading" class="waves-effect colorElegidoporcarolina colorRespuesta btn"  (click)="eligePokemon()">Calcular tu pokemon</a>
+      <app-spiner *ngIf="loading"></app-spiner>
+    </div>
+    <br>
+    <br>
+    <div *ngIf="pokemonElegido" style="margin:1em;padding:1em;" class="card colorElegidoporcarolina">
+      <div class="row">
+        <div class="col m8 s12">
+          <img src="assets/pokemon/{{pokemonElegido.nombre}}.png" alt="{{pokemonElegido.nombre}}" >
+        </div>      
+        <div class="col m4 s12">
+            <p>Tu pokemon elegido es {{pokemonElegido.nombre}},
+            Tu personalidad se caracteriza por:
+              <br>
+
+              <ul>
+                <ng-container *ngIf="pokemonElegido.puntos[0]>=50">
+                  <li>Eres muy torpe y descuidado, todos se aprovechan de ti, recibes una paga del estado para compensar tu falta de coeficiente intelectual</li>
+                </ng-container>
+                <ng-container *ngIf="pokemonElegido.puntos[0]<50 && pokemonElegido.puntos[0]>0">
+                  <li>Eres un poco lelo</li>
+                </ng-container>
+                <ng-container *ngIf="pokemonElegido.puntos[0]>-50 && pokemonElegido.puntos[0]<=0">
+                  <li>Tu decisiones son promedio, pero en general no eres subnormal</li>
+                </ng-container>
+                <ng-container *ngIf="pokemonElegido.puntos[0]<=-50 ">
+                  <li>Eres superlisto, todas tus decisiones son toman basadas en la logica y la razón</li>
+                </ng-container>
+                <br>
+
+                <ng-container *ngIf="pokemonElegido.puntos[1]>=50">
+                  <li>Eres un martir, te portas tan bien que no tienes en cuenta tu propias necesidades, algunos se aprovecharán de tu bondad, estate alerta</li>
+                </ng-container>
+                <ng-container *ngIf="pokemonElegido.puntos[1]<50 && pokemonElegido.puntos[1]>0">
+                  <li>Eres buena persona pero sin colarte</li>
+                </ng-container>
+                <ng-container *ngIf="pokemonElegido.puntos[1]>-50 && pokemonElegido.puntos[1]<=0">
+                  <li>Eres un poco hijo de puta a veces, pero con tus amigos te portas bien en general</li>
+                </ng-container>
+                <ng-container *ngIf="pokemonElegido.puntos[1]<=-50 ">
+                  <li>Eres un cabrón, te portas tela de mal, a ver si te mueres</li>
+                </ng-container>
+                <br>
+                 <ng-container *ngIf="pokemonElegido.puntos[2]>=50">
+                  <li>Estas mamadisimo, no le tienes miedo a nada aunque a veces eso provoca que te enfrentes a 35 leones</li>
+                </ng-container>
+                <ng-container *ngIf="pokemonElegido.puntos[2]<50 && pokemonElegido.puntos[2]>0">
+                  <li>Nadie se mete contigo por miedo, pero en realidad no eres para tanto...</li>
+                </ng-container>
+                <ng-container *ngIf="pokemonElegido.puntos[2]>-50 && pokemonElegido.puntos[2]<=0">
+                  <li>La gente te hace bulling porque les muestras tu debilidad, espabila!</li>
+                </ng-container>
+                <ng-container *ngIf="pokemonElegido.puntos[2]<=-50 ">
+                  <li>Eres una especie subdesarrollada de oruga, la cual los seres humanos disfrutan pisar</li>
+                </ng-container>
+              </ul>
+            <br>
+            <br>
+            Otros pokemons a los que te pareces son:
+            <br>
+            <span *ngIf="pokemons[0]!=pokemonElegido">-{{pokemons[0].nombre}} <br></span>
+            <span *ngIf="pokemons[1]!=pokemonElegido">-{{pokemons[1].nombre}} <br></span>
+            <span *ngIf="pokemons[2]!=pokemonElegido">-{{pokemons[2].nombre}} <br></span>
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <div style="text-align:center" >
+          <div class="waves-effect rosita colorRespuesta btn" style="margin-top:2em" (click)="refresh()">Repetir Test (Las preguntas cambian cada vez!)</div>
+        </div>
+    </div>
+  </div>
+  </span> 
+  <br>
+  <div class="card colorElegidoporcarolina">
+    <div class="row">
+      <div class="col m8 s12">
+        <div style="margin:2em">
+          <p>Apoya con una donación para pagar el mantenimiento de la pagina o invitame a un café :D</p>
+
+        </div>
+      </div>
+      <div class="col m4 s12" style="padding:1em;">
+      <a href="https://www.paypal.me/Alexmp00?locale.x=es_ES" style="width:100%;height:100%;" target="_blank">
+        <img alt="Qries" src="assets/donate.png">
+    </a>
+      </div>
+  </div>
+
+
+  <div style="font-size:0.7em;padding:0.5em">Esta página esta hecha sin ánimo de lucro por favor no nos la tires nin-ten-do, perdón por las multiples infracciones de copyright</div>
+</div>
+
+
+

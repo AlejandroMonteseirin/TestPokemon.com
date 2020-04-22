@@ -1,0 +1,22 @@
+.colorElegidoporcarolina{
+    background-color:  #ffffcc;
+  }
+  .rosita{
+    background-color:#ffe6ff;
+  
+  }
+  .colorRespuesta{
+    color:black;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+  .fuentePokemon {
+    font-family: poke;
+  }
+  .fuentePokemon2 {
+    font-family: poke2;
+  }
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
